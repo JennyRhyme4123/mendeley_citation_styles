@@ -9,6 +9,7 @@
         </author>
         <category citation-format="author-date"/>
         <summary>Custom citation style based on requested journal format.</summary>
+        <updated>2025-02-25</updated>
     </info>
     
     <citation>
@@ -34,20 +35,21 @@
             <key variable="issued"/>
         </sort>
         <layout>
-            <group delimiter=", ">
+            <group delimiter=". ">
                 <names variable="author">
                     <name and="text" delimiter=", " initialize-with=""/>
                 </names>
                 <date variable="issued">
                     <date-part name="year"/>
                 </date>
-                <text variable="title"/>
-                <text variable="container-title"/>
+                <text variable="title" suffix="."/>
+                <text variable="container-title" suffix=","/>
                 <text variable="volume" prefix=" " />
                 <text variable="issue" prefix="(" suffix=")"/>
                 <text variable="page" prefix=":"/>
-                <text variable="DOI" prefix="https://doi.org/"/>
+                <text variable="DOI" prefix=" https://doi.org/"/>
             </group>
         </layout>
     </bibliography>
 </style>
+
